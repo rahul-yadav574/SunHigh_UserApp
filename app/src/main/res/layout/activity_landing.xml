@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context="in.evolve.sunhigh.Activities.Landing">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <include layout="@layout/toolbar_material"
+                android:id="@+id/toolbar"/>
+
+            <android.support.design.widget.TabLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:tabIndicatorHeight="2dp"
+                app:tabMode="fixed"
+                app:tabTextColor="@android:color/white"
+                app:tabSelectedTextColor="@android:color/white"
+                app:tabIndicatorColor="@android:color/white"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/tab_layout"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/view_pager"/>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu" />
+
+
+
+</android.support.v4.widget.DrawerLayout>
+
+

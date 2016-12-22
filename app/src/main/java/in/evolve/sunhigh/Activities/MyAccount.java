@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import in.evolve.sunhigh.R;
 
-public class MyAccount extends AppCompatActivity {
+public class MyAccount extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -5,4 +5,13 @@
     <string name="pg_logo_image_view">Image Showing PG Logo</string>
     <string name="boys">Boys</string>
     <string name="girls">Girls</string>
+    <string name="hello">Hello !</string>
+    <string name="plzlogin">Login To Your Account</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_call_us">Call Us</string>
+    <string name="nav_rate_app">Rate App</string>
+    <string name="nav_about_us">About Us</string>
+    <string name="nav_like_on_facebook">Like On Facebook</string>
+    <string name="nav_locations">Our Locations</string>
+    <string name="registered_pg_user">Registered Pg User</string>
 </resources>

@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import in.evolve.sunhigh.R;
 
-public class PGPicsShow extends AppCompatActivity {
+public class PGPicsShow extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

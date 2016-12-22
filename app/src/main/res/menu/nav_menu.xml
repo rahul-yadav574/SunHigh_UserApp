@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:icon="@android:drawable/stat_sys_phone_call_on_hold"
+        android:id="@+id/nav_home"
+        android:title="@string/nav_home"/>
+    <item
+        android:icon="@android:drawable/ic_dialog_map"
+        android:id="@+id/nav_locations"
+        android:title="@string/nav_locations"/>
+    <item
+        android:icon="@android:drawable/ic_menu_call"
+        android:id="@+id/nav_call_us"
+        android:title="@string/nav_call_us"/>
+    <item
+        android:icon="@android:drawable/presence_audio_busy"
+        android:id="@+id/nav_about_us"
+        android:title="@string/nav_about_us"/>
+    <item
+        android:id="@+id/nav_like_on_facebook"
+        android:icon="@drawable/fb_icon"
+        android:title="@string/nav_like_on_facebook"/>
+    <item
+        android:icon="@drawable/ic_rate"
+        android:id="@+id/nav_rate_us"
+        android:title="@string/nav_rate_app"/>
+
 </menu>

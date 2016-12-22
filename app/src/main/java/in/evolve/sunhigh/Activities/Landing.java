@@ -1,9 +1,12 @@
 package in.evolve.sunhigh.Activities;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.PersistableBundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,6 +15,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,7 +24,7 @@ import in.evolve.sunhigh.Fragments.TabBoysPg;
 import in.evolve.sunhigh.Fragments.TabGirlsPg;
 import in.evolve.sunhigh.R;
 
-public class Landing extends AppCompatActivity {
+public class Landing extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
 
     private DrawerLayout drawerLayout;
@@ -54,11 +58,51 @@ public class Landing extends AppCompatActivity {
         adapter.addFragment(new TabGirlsPg(),getString(R.string.girls));
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        setHeaderDetails();
 
     }
 
+    private void setHeaderDetails(){
 
+        View view = navigationView.getHeaderView(0);
 
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.closeDrawer(GravityCompat.START);
+                Intent intent = new Intent(Landing.this,LoginMain.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView userName = (TextView) findViewById(R.id.header_name);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+        item.setChecked(true);
+
+        switch (id){
+            case R.id.nav_home:
+                break;
+            case R.id.nav_locations:
+                break;
+            case R.id.nav_call_us:
+                break;
+            case R.id.nav_like_on_facebook:
+                break;
+            case R.id.nav_rate_us:
+                break;
+            case R.id.nav_about_us:
+                break;
+        }
+
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

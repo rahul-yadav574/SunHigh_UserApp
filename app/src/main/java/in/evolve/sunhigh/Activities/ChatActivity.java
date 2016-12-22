@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import in.evolve.sunhigh.R;
 
-public class ChatActivity extends AppCompatActivity {
+public class ChatActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

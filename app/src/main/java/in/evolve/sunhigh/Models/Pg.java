@@ -12,14 +12,25 @@ public class Pg {
     private String pgLocation;
     private List<String> pgFacilities;
     private HashMap<String,String> pgChares;
+    private List<String> pgImagesLinks;
 
-    public Pg(String pgName, String pgLocation, List<String> pgFacilities, HashMap<String, String> pgChares) {
+
+
+    public Pg(String pgName, String pgLocation, List<String> pgFacilities, HashMap<String, String> pgChares,List<String> pgImagesLinks) {
         this.pgName = pgName;
         this.pgLocation = pgLocation;
         this.pgFacilities = pgFacilities;
         this.pgChares = pgChares;
+        this.pgImagesLinks = pgImagesLinks;
     }
 
+    public List<String> getPgImagesLinks() {
+        return this.pgImagesLinks;
+    }
+
+    public void setPgImagesLinks(List<String> pgImagesLinks) {
+        this.pgImagesLinks = pgImagesLinks;
+    }
     public String getPgName() {
         return this.pgName;
     }

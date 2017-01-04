@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.common.SignInButton;
 
@@ -17,7 +18,8 @@ public class LoginMain extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FacebookSdk.sdkInitialize(LoginMain.this);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(LoginMain.this);
         setContentView(R.layout.activity_login_main);
 
 
